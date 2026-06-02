@@ -2,25 +2,19 @@ import { Outlet } from 'react-router-dom'
 
 export function PublicLayout() {
   return (
-    // Layout wrapper
-    <div className="min-h-screen bg-white text-slate-900">
-      {/* Header placeholder */}
-      <header className="border-b border-slate-200 px-6 py-4">
-        <p className="text-sm font-medium text-slate-600">Public Header Placeholder</p>
-      </header>
+    // Public shell: full-width header/footer, constrained page content inside main.
+    <div className="flex min-h-screen w-full flex-col bg-white">
+      <header className="flex h-20 w-full shrink-0 flex-row bg-brand-purple md:h-25 lg:h-35" />
 
-      {/* Content area with nested routes */}
-      <main className="mx-auto w-full max-w-5xl px-6 py-10">
-        <section className="rounded-xl border border-slate-200 bg-slate-50 p-6">
-          <p className="mb-4 text-sm font-medium text-slate-500">Public Content Shell</p>
-          <Outlet />
+      <main className="min-w-0 flex-1 w-full bg-brand-cream">
+        <section className="w-full">
+          <div className="mx-auto w-full px-4 md:px-6">
+            <Outlet />
+          </div>
         </section>
       </main>
 
-      {/* Footer placeholder */}
-      <footer className="border-t border-slate-200 px-6 py-4">
-        <p className="text-sm font-medium text-slate-600">Public Footer Placeholder</p>
-      </footer>
+      <footer className="hidden h-20 w-full shrink-0 bg-brand-purple md:block md:h-25 lg:h-35" />
     </div>
   )
 }

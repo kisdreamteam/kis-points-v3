@@ -1,0 +1,80 @@
+---
+alwaysApply: true
+---
+
+# Styling Rules
+
+These rules apply strongly to:
+
+- PublicLayout
+- AuthLayout
+- DashboardLayout
+- route wrappers
+- headers
+- footers
+- sidebars
+- stage containers
+
+Shells should create clear box-model boundaries.
+
+Prefer:
+
+```tsx
+min-h-screen flex flex-col
+```
+
+Header/footer/sidebar wrappers should usually use:
+
+```tsx
+w-full shrink-0
+```
+
+Main stage areas should usually use:
+
+```tsx
+flex-1 w-full min-w-0
+```
+
+Content constraints belong inside sections.
+
+Prefer:
+
+```tsx
+<section className="w-full">
+  <div className="mx-auto w-full max-w-* px-*">Content</div>
+</section>
+```
+
+Prefer:
+
+- mobile first
+- readable Tailwind
+- full-width shells
+- constrained content areas
+- explicit layouts
+
+Avoid when possible:
+
+- fixed widths
+- large min widths
+- desktop-first styling
+- hidden overflow
+- shell content mixed with page content
+
+These rules are softer for:
+
+- modals
+- drawers
+- seating canvas
+- drag systems
+- highly custom UI
+
+Prioritize:
+
+```txt
+Predictable > clever
+
+Readable > reusable
+
+Simple > abstract
+```

@@ -1,3 +1,4 @@
+@import 'tailwindcss';
 /*
   Global style foundations for KIS-Points V3.
   Tailwind handles most UI styling; this file sets shared tokens and base defaults.
@@ -34,6 +35,18 @@
   --page-padding: 1.5rem;
   --section-gap: 2rem;
   --card-padding: 1.5rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  /* --color-brand-purple: #4A3B8D; */
+  --color-brand-purple: #4a3b8d;
+  --color-brand-pink: #d96b7b;
+  --color-brand-cream: #fcf1f0;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-spartan: 'LeagueSpartanExtraBold', sans-serif;
 }
 
 /*
