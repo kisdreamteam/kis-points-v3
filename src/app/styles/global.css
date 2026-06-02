@@ -1,0 +1,98 @@
+/*
+  Global style foundations for KIS-Points V3.
+  Tailwind handles most UI styling; this file sets shared tokens and base defaults.
+*/
+
+/* -------------------------------------------------------------------------- */
+/* Theme variables (neutral defaults)                                         */
+/* -------------------------------------------------------------------------- */
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+
+  --primary: #1e293b;
+  --primary-foreground: #f8fafc;
+
+  --secondary: #e2e8f0;
+  --secondary-foreground: #1e293b;
+
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+
+  --border: #e2e8f0;
+
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+
+  --radius: 0.75rem;
+
+  /*
+    Spacing helpers for page shells (auth, dashboard, public).
+    Prefer Tailwind utilities (p-4, gap-6, etc.) in components first.
+    Use these variables when you need one shared value across many pages.
+  */
+  --page-padding: 1.5rem;
+  --section-gap: 2rem;
+  --card-padding: 1.5rem;
+}
+
+/*
+  Spacing philosophy:
+  - Use Tailwind spacing utilities first (p-*, m-*, gap-*, space-*).
+  - Stay on the default scale (4, 6, 8, 10...) for consistency.
+  - Avoid random pixel values like p-[13px].
+  - Keep page/container spacing predictable across auth, dashboard, and public pages.
+*/
+
+/* -------------------------------------------------------------------------- */
+/* Base reset and typography                                                  */
+/* -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--foreground);
+  background-color: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--foreground);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--foreground);
+}
