@@ -1,20 +1,25 @@
 import { Outlet } from 'react-router-dom'
+import { PublicHeader } from '@/shared/components/public-header/PublicHeader'
 
 export function PublicLayout() {
   return (
     // Public shell: full-width header/footer, constrained page content inside main.
-    <div className="flex min-h-screen w-full flex-col bg-white">
-      <header className="flex h-20 w-full shrink-0 flex-row bg-brand-purple md:h-25 lg:h-35" />
+    <div className="min-h-screen flex flex-col">
+      
+      <header className="flex flex-row 
+                         lg:h-35 
+                         md:h-30 
+                         sm:h-25 
+                         h-20
+                         bg-brand-purple">
+        <PublicHeader />
+      </header>
 
-      <main className="min-w-0 flex-1 w-full bg-brand-cream">
-        <section className="w-full">
-          <div className="mx-auto w-full px-4 md:px-6">
-            <Outlet />
-          </div>
-        </section>
+
+      <main className="flex-1 h-full grid grid-cols-1 md:grid-cols-2 bg-brand-cream">
+        <Outlet />
       </main>
-
-      <footer className="hidden h-20 w-full shrink-0 bg-brand-purple md:block md:h-25 lg:h-35" />
+      
     </div>
   )
 }
