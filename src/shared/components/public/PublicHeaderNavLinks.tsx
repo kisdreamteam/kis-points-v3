@@ -7,7 +7,7 @@ export function PublicHeaderNavLinks() {
              md:gap-10 md:text-3xl md:mb-2 
              sm:gap-8 sm:text-2xl sm:mb-1
              gap-4 text-lg mb-1
-             text-white      
+             text-white font-spartan     
              font-bold">
             <Link to="/auth/login" className="hover:text-brand-pink transition-colors duration-300">Login</Link>
             <Link to="/auth/signup" className="hover:text-brand-pink transition-colors duration-300">Signup</Link>
