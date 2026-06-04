@@ -1,15 +1,10 @@
 export function PublicHeaderLogo() {
   return (
-    <div>
+    <div className="relative overflow-visible">
       <img
         src="/images/landing/landing-kis-logo.png"
         alt="Landing KIS Points Logo"
-        className="
-              h-16 translate-y-4
-              sm:h-20 sm:translate-y-5
-              md:h-25 md:translate-y-6 
-              lg:h-34 lg:translate-y-9 
-              w-auto scale-150"/>
+        className="h-[clamp(4.5rem,10vw,9rem)] w-auto translate-y-[25%] w-auto scale-150" />
     </div>
   )
 }
