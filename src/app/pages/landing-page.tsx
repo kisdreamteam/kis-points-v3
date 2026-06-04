@@ -4,15 +4,15 @@ import { PublicHeroMascot } from '@/shared/components/public/PublicHeroMascot'
 
 export function LandingPage() {
   return (
-    
-    <div className="grid grid-cols-1 w-full md:grid-cols-2 gap-10 md:gap-20">
-      
+
+    <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-10 md:gap-20">
+
       <div className="flex justify-center md:justify-end items-center md:items-start">
         <PublicHeroMascot />
       </div>
 
-      <div className="flex flex-col items-center md:items-center justify-start md:justify-start w-full md:w-11/20 md:gap-17 gap-10">
-        <div className="flex w-full">
+      <div className="flex flex-col w-full md:gap-17 gap-10">
+        <div className="flex w-full justify-center md:justify-start items-center md:items-start">
           <PublicHeroContent />
         </div>
 
