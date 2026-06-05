@@ -5,18 +5,28 @@ import { PublicHeroMascot } from '@/shared/components/public/PublicHeroMascot'
 export function LandingPage() {
   return (
 
-    <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-5 md:gap-20">
+    
+    <div className="grid 
+                    grid-cols-1 
+                    sm:grid-cols-2
+                    md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] 
+                    gap-5 sm:gap-10 md:gap-[clamp(1.25rem,4vw,5rem)]
+                    ">
 
-      <div className="flex justify-center md:justify-end items-center md:items-start">
+      <div className="flex
+                      justify-center sm:justify-center md:justify-center lg:justify-end 
+                      items-end sm:items-center md:items-center lg:items-start">
         <PublicHeroMascot />
       </div>
 
-      <div className="flex flex-col w-full md:gap-17 gap-5">
-        <div className="flex w-full justify-center md:justify-start items-center md:items-start">
+      <div className="flex flex-col 
+                      gap-5 sm:gap-5 md:gap-[clamp(0.5rem,1vw,5rem)]
+                      ">
+        <div className="flex">
           <PublicHeroContent />
         </div>
 
-        <div className="flex w-full justify-center md:justify-start items-center md:items-start">
+        <div className="flex">
           <PublicHeroFeatures />
         </div>
       </div>

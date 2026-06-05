@@ -4,8 +4,8 @@ import { PublicHeaderLogo } from "./PublicHeaderLogo"
 export function PublicHeader() {
   return (
     <div className="flex flex-row w-full justify-end items-end
-                    lg:pr-20 md:pr-15 sm:pr-10 pr-5 
-                    lg:gap-20 md:gap-15 sm:gap-10 gap-5">
+                    pr-10 sm:pr-15 md:pr-20 lg:pr-25    
+                    gap-10 sm:gap-15 md:gap-20 lg:gap-25   ">
       <PublicHeaderNavLinks />
       <PublicHeaderLogo />
     </div>
