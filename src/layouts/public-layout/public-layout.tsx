@@ -5,14 +5,8 @@ export function PublicLayout() {
   return (
     // Public shell: full-width header/footer, constrained page content inside main.
 
-    <div className="min-h-dvh 
-                    flex flex-col 
-                    gap-[clamp(2rem,4.5vw,5rem)] 
-                    bg-white">
-      <header className="relative flex 
-                         h-[clamp(5rem,10vw,8.75rem)] 
-                         overflow-visible 
-                         bg-brand-purple">
+    <div className="min-h-dvh flex flex-col gap-[clamp(2.5rem,4.7vw,5rem)] bg-white">
+      <header className="relative flex h-[clamp(5rem,10vw,8.75rem)] min-w-[200px] overflow-visible bg-brand-purple">
         <PublicHeader />
       </header>
 
